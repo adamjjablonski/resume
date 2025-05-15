@@ -1,0 +1,105 @@
+%-------------------------
+% Rover Resume - Base Template
+% Link: https://github.com/subidit/rover-resume
+%
+% Shows code for various formatting options for different resume sections.
+% Education and Projects have single-line headers; while Experience uses double-line.
+% Some formatting codes are kept inline; consider \newcommand{cmd}{def}.
+% Excludes hyperref and icons for readability; MVP version.
+% Explore other templates for more options.
+% Mix and match as desired. Be consistent with headers and sub-headers.
+%------------------------
+
+\documentclass[11pt]{article} % fontsize 10pt/11pt/12pt
+
+\usepackage[margin=1in, letterpaper]{geometry}
+\setcounter{secnumdepth}{0} % remove section numbering
+\usepackage{titlesec}
+\titlespacing{\subsection}{0pt}{*0}{*0} % remove vertical spacing above and below
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{}[\titlerule]
+\titleformat*{\subsubsection}{\large\itshape}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,left=0pt .. \parindent}
+\pagestyle{empty} % remove page number
+\pdfgentounicode=1
+
+
+\begin{document}
+
+\begin{center}
+	\begin{minipage}{0.45\textwidth}
+		{\Huge\bfseries
+			Adam Jablonski % Name Here
+		} \\ \medskip
+		% Resume Template % Title [optional]
+	\end{minipage} \hfill
+	\begin{minipage}{0.5\textwidth}
+		\raggedleft
+		adam.j.jablonski@gmail.com\\
+		+1 (734) 890-8487\\
+		linkedin.com/in/ajjablonski/
+	\end{minipage}
+\end{center}
+
+\section{Summary}
+%=================%
+Software Engineer with extensive experience in automotive sub-system integration testing, 
+test automation tool development, and end-to-end software development lifecycles. Skilled in 
+Python and C++ development, log and data analysis, defect triage and management, and technical 
+documentation. Successfully built and maintained critical test infrastructure supporting 
+thousands of automated test executions across both production vehicles and HIL test benches.
+
+\section{Experience}
+%=================%
+\subsection{Ford Motor Company $|$ {\normalfont Dearborn, MI}}
+\subsubsection{Software Development Engineer in Test \hfill  Nov 2023--May 2025}
+\begin{itemize}
+	\item Contributed core functionality, including automated test configuration, 
+	vehicle interaction (ignition control, DTC logging, etc.), on-vehicle diagnostic logging, 
+	and remote log streaming, to In-Vehicle Automation (IVA), an automated OTA test orchestrator 
+	and executor, achieving 135,000 fully automated in-vehicle OTA test runs and counting.
+	\item Led peer code reviews, mentored junior engineers and analysts, and authored technical 
+	documentation in Confluence covering the IVA system architecture and best practices.
+\end{itemize}
+
+\subsubsection{Software Test Engineer (Contract)\hfill July 2021--Nov 2023}
+\begin{itemize}
+	\item Designed, implemented, and maintained Vehicle Logging Client (VLC),
+	a Python CLI tool that reduced manual OTA test execution time by 5-10 minutes per run
+	by automating logging instrumentation setup/teardown, monitoring log health, and 
+	organizing test data for triage. 
+	\item Created comprehensive Confluence documentation for VLC and provided ongoing
+	user onboarding and troubleshooting support, increasing team-wide tool adoption to 95\%+.
+	\item Performed manual OTA regression testing on hardware test benches and development and 
+	production vehicles, analyzing system logs to root-cause update failures, 
+	documenting defect details and steps to reproduce in Jira, and verifying fixes.
+\end{itemize}
+
+\subsection{ZF Group $|$ {\normalfont Fowlerville, MI}}
+\subsubsection{Quality Engineering Intern \hfill May 2017--Oct 2019}
+\begin{itemize}
+	\item 
+\end{itemize}
+
+\section{Education}
+%=================%
+\subsection{Michigan State University $|$ {\normalfont East Lansing, MI} \hfill 2019--2021}
+\noindent Bachelor of Science, Computer Engineering - 3.99 GPA
+
+% \section{Certification \& Awards}
+%===============================%
+% \begin{enumerate}[label=\null, left=0pt..0pt, itemsep=0pt]
+% 	\item Some programming bootcamp, Location. \hfill 2023
+% 	\item Forbes Top 15 Procrastinators under 15. \hfill 2022
+% 	\item Perticipation award for attending workshop. \hfill 2021
+% \end{enumerate}
+
+\section{Skills}
+%===========================%
+\begin{description}[itemsep=0pt]
+	\item[Technologies] Python, C++, GitHub, Jira, Confluence, TestRail, Slash, Pytest, CAN/CAN-FD
+	\item[Practices] Scaled Agile for Enterprise (SAFE), UML, 
+\end{description}
+
+\end{document}
