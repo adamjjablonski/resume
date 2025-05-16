@@ -1,2 +1,2 @@
 # Resume
- Version control and history for Resume drafts
+ Version control, history, and branching for my resume drafts.
