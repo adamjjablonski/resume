@@ -1,33 +1,29 @@
 %-------------------------
-% Rover Resume - Base Template
+% Based on Rover Resume - Base Template
 % Link: https://github.com/subidit/rover-resume
-%
-% Shows code for various formatting options for different resume sections.
-% Education and Projects have single-line headers; while Experience uses double-line.
-% Some formatting codes are kept inline; consider \newcommand{cmd}{def}.
-% Excludes hyperref and icons for readability; MVP version.
-% Explore other templates for more options.
-% Mix and match as desired. Be consistent with headers and sub-headers.
 %------------------------
 
-\documentclass[11pt]{article} % fontsize 10pt/11pt/12pt
+\documentclass[10pt]{article}
 
-\usepackage[sfdefault]{noto} %% option 'sfdefault' activates Fira Sans as the default text font
+% Typeface
+\usepackage[sfdefault]{noto} % Noto Sans
 \usepackage[T1]{fontenc}
-% \renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
 
+% Define accent color for horizontal lines
 \usepackage{xcolor}
 \definecolor{accent}{HTML}{141E61}
 
+% Page size and margins
 \usepackage{geometry}
 \geometry{
 letterpaper,
 margin=0.75in
 }
 
-\setcounter{secnumdepth}{0} % remove section numbering
+% Remove section numbering
+\setcounter{secnumdepth}{0} 
 
-%====== TITLE FORMATTING ======
+% Title formatting
 \usepackage{xhfill}
 \usepackage{soul}
 \newcommand{\leftrule}[1]{
@@ -36,37 +32,29 @@ margin=0.75in
 }
 
 \usepackage{titlesec}
-\titlespacing{\section}{0pt}{*2}{*1}
+\titlespacing{\section}{0pt}{*4}{*1}
 \titlespacing{\subsection}{0pt}{*3}{*0}
-\titlespacing{\subsubsection}{0pt}{*1}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
 \titleformat{\section}{\large\bfseries\uppercase}{}{}{\leftrule}
-% \titleformat*{\subsection}{\large\bfseries\scshape}
 
-\usepackage{enumitem}
-\setlist[itemize]{noitemsep,left=0pt .. \parindent}
-\pagestyle{empty} % remove page number
-\pdfgentounicode=1
-
-%====== LIST FORMATTING ======
+% List formatting
 \usepackage{enumitem}
 \setlist[itemize]{nosep, left=0pt .. 1.5em}
 \setlist[enumerate]{left=0pt..1.5em}
 \setlist[description]{itemsep=0pt}
-
 
 \begin{document}
 
 \begin{center}
 	\begin{minipage}{0.45\textwidth}
 		{\Huge\bfseries
-			Adam Jablonski % Name Here
-		} \\ \medskip
-		% Resume Template % Title [optional]
+			Adam Jablonski
+		}
 	\end{minipage} \hfill
 	\begin{minipage}{0.5\textwidth}
 		\raggedleft
-		adam.j.jablonski@gmail.com\\
-		+1 (734) 890-8487\\
+		adam.j.jablonski@gmail.com \\
+		+1 (734) 890-8487 \\
 		linkedin.com/in/ajjablonski/
 	\end{minipage}
 \end{center}
@@ -82,6 +70,7 @@ thousands of automated test executions across both production vehicles and HIL t
 \section{Experience}
 %=================%
 \subsection{Ford Motor Company $|$ {\normalfont Dearborn, MI} \hfill 2021--2025}
+
 \subsubsection{Software Development Engineer in Test \hfill  Nov 2023--May 2025}
 \begin{itemize}
 	\item Contributed core functionality, including automated test configuration, 
@@ -92,12 +81,11 @@ thousands of automated test executions across both production vehicles and HIL t
 	documentation in Confluence covering the IVA system architecture and best practices.
 \end{itemize}
 
-
 \subsubsection{Software Test Engineer (Contract)\hfill July 2021--Nov 2023}
 \begin{itemize}
 	\item Designed, implemented, and maintained Vehicle Logging Client (VLC),
 	a Python CLI tool that reduced manual OTA test execution time by 5-10 minutes per run
-	by automating logging instrumentation setup/teardown, monitoring log health, and 
+	by automating logging instrumentation setup and teardown, monitoring log health, and 
 	organizing test data for triage. 
 	\item Created comprehensive Confluence documentation for VLC and provided ongoing
 	user onboarding and troubleshooting support, increasing team-wide tool adoption to 95\%+.
@@ -107,6 +95,7 @@ thousands of automated test executions across both production vehicles and HIL t
 \end{itemize}
 
 \subsection{ZF Group $|$ {\normalfont Fowlerville, MI} \hfill 2017--2019}
+
 \subsubsection{Quality Engineering Intern \hfill May 2017--Oct 2019}
 \begin{itemize}
 	\item Fabricated, installed, and documented automatic test equipment (ATE) components—including 
@@ -122,14 +111,6 @@ thousands of automated test executions across both production vehicles and HIL t
 %=================%
 \subsection{Michigan State University $|$ {\normalfont East Lansing, MI} \hfill 2019--2021}
 \noindent Bachelor of Science, Computer Engineering - 3.99 GPA
-
-% \section{Certification \& Awards}
-%===============================%
-% \begin{enumerate}[label=\null, left=0pt..0pt, itemsep=0pt]
-% 	\item Some programming bootcamp, Location. \hfill 2023
-% 	\item Forbes Top 15 Procrastinators under 15. \hfill 2022
-% 	\item Perticipation award for attending workshop. \hfill 2021
-% \end{enumerate}
 
 \section{Skills}
 %===========================%
