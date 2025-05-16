@@ -12,17 +12,46 @@
 
 \documentclass[11pt]{article} % fontsize 10pt/11pt/12pt
 
-\usepackage[margin=1in, letterpaper]{geometry}
+\usepackage[sfdefault]{noto} %% option 'sfdefault' activates Fira Sans as the default text font
+\usepackage[T1]{fontenc}
+% \renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{141E61}
+
+\usepackage{geometry}
+\geometry{
+letterpaper,
+margin=0.75in
+}
+
 \setcounter{secnumdepth}{0} % remove section numbering
+
+%====== TITLE FORMATTING ======
+\usepackage{xhfill}
+\usepackage{soul}
+\newcommand{\leftrule}[1]{
+  \leavevmode
+  \so{#1}~\xrfill[.5ex]{1pt}[accent]
+}
+
 \usepackage{titlesec}
-\titlespacing{\subsection}{0pt}{*0}{*0} % remove vertical spacing above and below
-\titlespacing{\subsubsection}{0pt}{*0}{*0}
-\titleformat{\section}{\large\bfseries\uppercase}{}{}{}[\titlerule]
-\titleformat*{\subsubsection}{\large\itshape}
+\titlespacing{\section}{0pt}{*2}{*1}
+\titlespacing{\subsection}{0pt}{*3}{*0}
+\titlespacing{\subsubsection}{0pt}{*1}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{\leftrule}
+% \titleformat*{\subsection}{\large\bfseries\scshape}
+
 \usepackage{enumitem}
 \setlist[itemize]{noitemsep,left=0pt .. \parindent}
 \pagestyle{empty} % remove page number
 \pdfgentounicode=1
+
+%====== LIST FORMATTING ======
+\usepackage{enumitem}
+\setlist[itemize]{nosep, left=0pt .. 1.5em}
+\setlist[enumerate]{left=0pt..1.5em}
+\setlist[description]{itemsep=0pt}
 
 
 \begin{document}
@@ -44,7 +73,7 @@
 
 \section{Summary}
 %=================%
-Software Engineer with extensive experience in automotive sub-system integration testing, 
+\noindent Software Engineer with extensive experience in automotive sub-system integration testing, 
 test automation tool development, and end-to-end software development lifecycles. Skilled in 
 Python and C++ development, log and data analysis, defect triage and management, and technical 
 documentation. Successfully built and maintained critical test infrastructure supporting 
@@ -52,7 +81,7 @@ thousands of automated test executions across both production vehicles and HIL t
 
 \section{Experience}
 %=================%
-\subsection{Ford Motor Company $|$ {\normalfont Dearborn, MI}}
+\subsection{Ford Motor Company $|$ {\normalfont Dearborn, MI} \hfill 2021--2025}
 \subsubsection{Software Development Engineer in Test \hfill  Nov 2023--May 2025}
 \begin{itemize}
 	\item Contributed core functionality, including automated test configuration, 
@@ -62,6 +91,7 @@ thousands of automated test executions across both production vehicles and HIL t
 	\item Led peer code reviews, mentored junior engineers and analysts, and authored technical 
 	documentation in Confluence covering the IVA system architecture and best practices.
 \end{itemize}
+
 
 \subsubsection{Software Test Engineer (Contract)\hfill July 2021--Nov 2023}
 \begin{itemize}
@@ -76,10 +106,16 @@ thousands of automated test executions across both production vehicles and HIL t
 	documenting defect details and steps to reproduce in Jira, and verifying fixes.
 \end{itemize}
 
-\subsection{ZF Group $|$ {\normalfont Fowlerville, MI}}
+\subsection{ZF Group $|$ {\normalfont Fowlerville, MI} \hfill 2017--2019}
 \subsubsection{Quality Engineering Intern \hfill May 2017--Oct 2019}
 \begin{itemize}
-	\item 
+	\item Fabricated, installed, and documented automatic test equipment (ATE) components—including 
+	test fixtures and wire harnesses—for end-of-line test stands, ensuring final verification of ABS 
+	electronic and hydraulic control unit functionality before shipping to customers.
+	\item Co-developed software upgrades to EOL test-stand LabWindows/CVI code to add compatability with CAN-FD for 
+	incoming General Motors Global B E/E architecture.
+	\item Enhanced a Java-based cross-platform quality reporting and data querying application, utilizing the JavaFX 
+	platform for rich graphical user interfaces.
 \end{itemize}
 
 \section{Education}
@@ -98,8 +134,8 @@ thousands of automated test executions across both production vehicles and HIL t
 \section{Skills}
 %===========================%
 \begin{description}[itemsep=0pt]
-	\item[Technologies] Python, C++, GitHub, Jira, Confluence, TestRail, Slash, Pytest, CAN/CAN-FD
-	\item[Practices] Scaled Agile for Enterprise (SAFE), UML, 
+	\item[Technologies] Python, C++, GitHub, Jira, TestRail, JFrog, Jenkins, Slash, Pytest, CAN/CAN-FD, UML
+	\item[Practices] Scaled Agile for Enterprise (SAFE), Software Development Life Cycle (SDLC)
 \end{description}
 
 \end{document}
