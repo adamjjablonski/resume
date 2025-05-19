@@ -6,8 +6,9 @@
 \documentclass[10pt]{article}
 
 % Typeface
-\usepackage[sfdefault]{noto} % Noto Sans
+\usepackage[scaled=0.96]{helvet}
 \usepackage[T1]{fontenc}
+\renewcommand{\familydefault}{\sfdefault}
 
 % Accent color for horizontal lines
 \usepackage{xcolor}
@@ -32,10 +33,11 @@
 }
 
 \usepackage{titlesec}
-\titlespacing{\section}{0pt}{*4}{*1}
-\titlespacing{\subsection}{0pt}{*3}{*0}
-\titlespacing{\subsubsection}{0pt}{*0}{*0}
-\titleformat{\section}{\large\bfseries\uppercase}{}{}{\leftrule}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{}[\titlerule]
+\titlespacing{\section}{0pt}{*2}{*1}
+\titlespacing{\subsection}{0pt}{*1}{*0.5}
+\titlespacing{\subsubsection}{0pt}{*1}{*0}
+\titleformat*{\subsubsection}{\large\itshape}
 
 % List formatting
 \usepackage{enumitem}
@@ -72,9 +74,17 @@ Successfully built and maintained critical test infrastructure supporting
 thousands of automated test executions across both production vehicles and 
 hardware-in-the-loop (HIL) test benches.
 
+\section{Skills}
+\begin{description}[itemsep=0pt]
+  \item[Technologies] Python, C++, GitHub, Jira, TestRail, JFrog, Jenkins, 
+  Slash, Pytest, CAN/CAN-FD, UML
+  \item[Practices] Scaled Agile for Enterprise (SAFE), Software Development 
+  Life Cycle (SDLC)
+\end{description}
+
 \section{Experience}
 \subsection{Ford Motor Company $|$ {\normalfont Dearborn, MI} \hfill 2021--2025}
-\vspace*{0.05in}
+
 \subsubsection{Software Development Engineer in Test \hfill Nov 2023--May 2025}
 \begin{itemize}
   \item Contributed core functionality, including automated test configuration,
@@ -86,7 +96,7 @@ hardware-in-the-loop (HIL) test benches.
   authored technical documentation in Confluence covering the IVA system 
   architecture and best practices.
 \end{itemize}
-\vspace*{0.05in}
+
 \subsubsection{Software Test Engineer (Contract)\hfill July 2021--Nov 2023}
 \begin{itemize}
   \item Designed, implemented, and maintained Vehicle Logging Client (VLC),
@@ -103,7 +113,7 @@ hardware-in-the-loop (HIL) test benches.
 \end{itemize}
 
 \subsection{ZF Group $|$ {\normalfont Fowlerville, MI} \hfill 2017--2019}
-\vspace*{0.05in}
+
 \subsubsection{Quality Engineering Intern \hfill May 2017--Oct 2019}
 \begin{itemize}
   \item Fabricated, installed, and documented automatic test equipment (ATE) 
@@ -122,12 +132,6 @@ hardware-in-the-loop (HIL) test benches.
 \subsection{Michigan State University $|$ {\normalfont East Lansing, MI} \hfill 2019--2021}
 \noindent Bachelor of Science, Computer Engineering - 3.99 GPA
 
-\section{Skills}
-\begin{description}[itemsep=0pt]
-  \item[Technologies] Python, C++, GitHub, Jira, TestRail, JFrog, Jenkins, 
-  Slash, Pytest, CAN/CAN-FD, UML
-  \item[Practices] Scaled Agile for Enterprise (SAFE), Software Development 
-  Life Cycle (SDLC)
-\end{description}
+
 
 \end{document}
