@@ -3,10 +3,10 @@
 % Link: https://github.com/subidit/rover-resume
 %------------------------
 
-\documentclass[10pt]{article}
+\documentclass[11pt]{article}
 
 % Typeface
-\usepackage[scaled=0.96]{helvet}
+\usepackage[scaled=0.92]{helvet}
 \usepackage[T1]{fontenc}
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -34,7 +34,7 @@
 
 \usepackage{titlesec}
 \titleformat{\section}{\large\bfseries\uppercase}{}{}{}[\titlerule]
-\titlespacing{\section}{0pt}{*2}{*1}
+\titlespacing{\section}{0pt}{*1.6}{*0.8}
 \titlespacing{\subsection}{0pt}{*1}{*0.5}
 \titlespacing{\subsubsection}{0pt}{*1}{*0}
 \titleformat*{\subsubsection}{\large\itshape}
@@ -66,20 +66,16 @@
 
 \section{Summary}
 \noindent 
-Software Engineer with extensive experience in automotive sub-system 
-integration testing,test automation tool development, and end-to-end software 
-development lifecycles. Skilled in Python and C++ development, log and data 
-analysis, defect triage and management, and technical documentation. 
-Successfully built and maintained critical test infrastructure supporting 
-thousands of automated test executions across both production vehicles and 
-hardware-in-the-loop (HIL) test benches.
+Software Engineer with 4+ years of experience in automotive systems, including 
+integration and end-to-end software testing, test automation tool development, and vehicle 
+controls/diagnostics. Developed C++ and Python-based test infrastructure supporting 
+thousands of automated test executions across HIL benches and vehicles.
 
 \section{Skills}
 \begin{description}[itemsep=0pt]
-  \item[Technologies] Python, C++, GitHub, Jira, TestRail, JFrog, Jenkins, 
-  Slash, Pytest, CAN/CAN-FD, UML
-  \item[Practices] Scaled Agile for Enterprise (SAFE), Software Development 
-  Life Cycle (SDLC)
+  \item[Tools] Python, C/C++, CAN/CAN-FD, Slash, Pytest, UML, Jira, Confluence, GitHub, TestRail, JFrog, Jenkins
+  \item[Practices] SDLC, Scaled Agile (SAFe), Requirements Analysis, CI/CD, 
+  Test Automation, Diagnostic Log Analysis
 \end{description}
 
 \section{Experience}
@@ -90,11 +86,14 @@ hardware-in-the-loop (HIL) test benches.
   \item Contributed core functionality, including automated test configuration,
   vehicle interaction (ignition control, DTC logging, etc.), on-vehicle 
   diagnostic logging, and remote log streaming, to In-Vehicle Automation (IVA), 
-  an automated OTA test orchestrator and executor, achieving 135,000 fully 
-  automated in-vehicle OTA test runs and counting.
-  \item Led peer code reviews, mentored junior engineers and analysts, and 
-  authored technical documentation in Confluence covering the IVA system 
-  architecture and best practices.
+  an automated over-the-air update (OTA) test orchestrator and executor, achieving 135,000 fully 
+  automated in-vehicle OTA update test runs and counting.
+  \item Collaborated with cross-functional teams to identify opportunities for 
+  automation and translate OTA update end-to-end test requirements into functional requirements and user stories for IVA testing framework.
+  \item Authored technical documentation in Confluence covering the IVA system 
+  architecture, hardware and software setup process, opportunities for extension and customization, and best usage practices.
+  \item Onboarded new hires to development and testing tools, frameworks, and practices; held training sessions for newly developed automation 
+  tools; mentored junior test engineers and analysts; and wrote on-boarding guides.
 \end{itemize}
 
 \subsubsection{Software Test Engineer (Contract)\hfill July 2021--Nov 2023}
@@ -103,29 +102,31 @@ hardware-in-the-loop (HIL) test benches.
   a Python CLI tool that reduced manual OTA test execution time by 5-10 minutes 
   per run by automating logging instrumentation setup and teardown, monitoring 
   log health, and organizing test data for triage.
-  \item Created comprehensive Confluence documentation for VLC and provided 
-  ongoing user onboarding and troubleshooting support, increasing team-wide 
+  \item Created comprehensive Confluence documentation for VLC; held global training 
+  sessions to pitch and introduce VLC to other teams within Ford product development;
+  provided ongoing user onboarding and troubleshooting support, increasing team-wide 
   tool adoption to over 95\%.
-  \item Performed manual OTA regression testing on hardware test benches and 
-  development and production vehicles, analyzing system logs to root-cause 
-  update failures, documenting defect details and steps to reproduce in Jira, 
-  and verifying fixes.
+  \item Performed manual OTA update regression testing on both hardware test 
+  benches (integration testing) and development and production vehicles 
+  (end-to-end testing), analyzing system logs to root-cause update failures, 
+  documenting defect details and steps to reproduce in Jira, and verifying fixes.
 \end{itemize}
 
 \subsection{ZF Group $|$ {\normalfont Fowlerville, MI} \hfill 2017--2019}
 
-\subsubsection{Quality Engineering Intern \hfill May 2017--Oct 2019}
+\subsubsection{Engineering Intern (Contract) \hfill May 2017--Oct 2019}
 \begin{itemize}
+  \item Implemented CAN-FD-related software upgrades for ABS electronic control 
+  unit end-of-line test stand to add compatability for incoming General Motors 
+  Global B E/E architecture.
+  \item Enhanced a Java-based cross-platform quality reporting and data 
+  querying application, utilizing the JavaFX platform for rich graphical user 
+  interfaces and enabling assembly staff to more easily submit quality reports 
+  and query traceability data from the plant's Oracle SQL database.
   \item Fabricated, installed, and documented automatic test equipment (ATE) 
   components—including test fixtures and wire harnesses—for end-of-line test 
   stands, ensuring final verification of ABS electronic and hydraulic control 
   unit functionality before shipping to customers.
-  \item Co-developed software upgrades to EOL test-stand LabWindows/CVI code 
-  to add compatability with CAN-FD for incoming General Motors Global B E/E 
-  architecture.
-  \item Enhanced a Java-based cross-platform quality reporting and data 
-  querying application, utilizing the JavaFX platform for rich graphical user 
-  interfaces.
 \end{itemize}
 
 \section{Education}
